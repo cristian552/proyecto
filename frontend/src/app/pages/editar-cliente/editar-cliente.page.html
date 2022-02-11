@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Actualizar Cliente</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input placeholder="Enter Input" name="nombre" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Documento</ion-label>
+    <ion-input placeholder="Enter Input" name="documento" [(ngModel)]="documento"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Telefono</ion-label>
+    <ion-input placeholder="Enter Input" name="telefono" [(ngModel)]="telefono"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input placeholder="Enter Input" name="documento" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-button color="primary" (click)="updateCliente()">Actualizar</ion-button>
+
+</ion-content>

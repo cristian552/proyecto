@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>    
+    <ion-title>Listado De Marcas</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <ion-icon slot="icon-only" name="add" (click)="nueva_marca()"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    
+    <ion-item-sliding *ngFor="let marca of marcas; let indice=index">
+      
+      <ion-item>
+        <ion-label autocomplete="off">{{marca.Mar_Nombre}}</ion-label>
+      </ion-item>
+      
+      <ion-item-options slide="end">
+        <ion-item-option (click)="createMarca(marca._id)" color="warning">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-item-option>
+
+        <ion-item-option (click)="deleteMarca(marca._id, indice)" color="danger">
+        <ion-icon name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+     
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
